@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://img/font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://actors/stats.gd" type="Script" id=2]
+[ext_resource path="res://actors/button.tscn" type="PackedScene" id=3]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 967, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "in"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 964, -0.25, 0, 0.1, -105.328, 767, -0.3, -0.920227, 1.4, -3.33148 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "out"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 767, -0.3, -0.920227, 0.3, -0.457275, 964, -0.1, -103.9, 4.8, 21.4856 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5 )
+}
+
+[node name="ColorRect" type="ColorRect"]
+margin_left = 967.0
+margin_right = 1160.0
+margin_bottom = 564.0
+mouse_filter = 2
+color = Color( 0.184314, 0.192157, 0.211765, 1 )
+script = ExtResource( 2 )
+
+[node name="Stats" type="Label" parent="."]
+margin_left = 6.0
+margin_top = 53.0
+margin_right = 190.0
+margin_bottom = 487.0
+custom_fonts/font = ExtResource( 1 )
+text = "sex: 1
+sex: 2
+sex: 3"
+
+[node name="Title" type="Label" parent="."]
+margin_right = 193.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 1 )
+text = "Stats"
+align = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+anims/in = SubResource( 3 )
+anims/out = SubResource( 4 )
+
+[node name="Button" parent="." instance=ExtResource( 3 )]
+margin_left = 62.0
+margin_top = 495.0
+margin_right = 174.0
+margin_bottom = 530.0
+text = "Back"

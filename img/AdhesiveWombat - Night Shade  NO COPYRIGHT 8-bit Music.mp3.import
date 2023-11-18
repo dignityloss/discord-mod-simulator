@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/AdhesiveWombat - Night Shade  NO COPYRIGHT 8-bit Music.mp3-4b6d43990a2bb492ff4c9edc5b4c3644.mp3str"
+
+[deps]
+
+source_file="res://img/AdhesiveWombat - Night Shade  NO COPYRIGHT 8-bit Music.mp3"
+dest_files=[ "res://.import/AdhesiveWombat - Night Shade  NO COPYRIGHT 8-bit Music.mp3-4b6d43990a2bb492ff4c9edc5b4c3644.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

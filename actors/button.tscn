@@ -1,0 +1,29 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://img/button.png" type="Texture" id=1]
+[ext_resource path="res://img/button hover.png" type="Texture" id=2]
+[ext_resource path="res://img/font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://actors/button.tres" type="StyleBox" id=4]
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 65, 29 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 65, 29 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 65, 29 )
+modulate_color = Color( 1, 1, 0.52549, 1 )
+
+[node name="Button" type="Button"]
+margin_right = 112.0
+margin_bottom = 35.0
+custom_fonts/font = ExtResource( 3 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+text = "Button"
